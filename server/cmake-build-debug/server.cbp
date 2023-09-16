@@ -5,7 +5,7 @@
 		<Option title="server"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\file\;CMake Files\src\network\;CMake Files\src\work\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/zr/桌面/miniftp/server/cmake-build-debug"/>
@@ -24,6 +24,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/zr/桌面/miniftp/server/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -43,6 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/zr/桌面/miniftp/server/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
@@ -75,12 +77,150 @@
 					<DistClean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="file">
+				<Option output="/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/libfile.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zr/桌面/miniftp/server/cmake-build-debug/src/file"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zr/桌面/miniftp/server/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/Makefile&quot;  VERBOSE=1 file"/>
+					<CompileFile command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="file/fast">
+				<Option output="/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/libfile.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zr/桌面/miniftp/server/cmake-build-debug/src/file"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zr/桌面/miniftp/server/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/Makefile&quot;  VERBOSE=1 file/fast"/>
+					<CompileFile command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/file/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="network">
+				<Option output="/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/libnetwork.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zr/桌面/miniftp/server/cmake-build-debug/src/network"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zr/桌面/miniftp/server/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/Makefile&quot;  VERBOSE=1 network"/>
+					<CompileFile command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="network/fast">
+				<Option output="/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/libnetwork.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zr/桌面/miniftp/server/cmake-build-debug/src/network"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zr/桌面/miniftp/server/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/Makefile&quot;  VERBOSE=1 network/fast"/>
+					<CompileFile command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/network/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="work">
+				<Option output="/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/libwork.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zr/桌面/miniftp/server/cmake-build-debug/src/work"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zr/桌面/miniftp/server/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/Makefile&quot;  VERBOSE=1 work"/>
+					<CompileFile command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="work/fast">
+				<Option output="/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/libwork.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zr/桌面/miniftp/server/cmake-build-debug/src/work"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/zr/桌面/miniftp/server/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/12/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/Makefile&quot;  VERBOSE=1 work/fast"/>
+					<CompileFile command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="make -j16 -f &quot;/home/zr/桌面/miniftp/server/cmake-build-debug/src/work/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/zr/桌面/miniftp/server/main.c">
 			<Option target="server"/>
 		</Unit>
+		<Unit filename="/home/zr/桌面/miniftp/server/src/file/file.c">
+			<Option target="file"/>
+		</Unit>
+		<Unit filename="/home/zr/桌面/miniftp/server/src/network/network.c">
+			<Option target="network"/>
+		</Unit>
+		<Unit filename="/home/zr/桌面/miniftp/server/src/work/work.c">
+			<Option target="work"/>
+		</Unit>
 		<Unit filename="/home/zr/桌面/miniftp/server/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/zr/桌面/miniftp/server/src/file/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\file\"/>
+		</Unit>
+		<Unit filename="/home/zr/桌面/miniftp/server/src/network/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\network\"/>
+		</Unit>
+		<Unit filename="/home/zr/桌面/miniftp/server/src/work/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\work\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

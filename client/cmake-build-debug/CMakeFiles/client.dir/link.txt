@@ -1,1 +1,1 @@
-/usr/bin/gcc -g CMakeFiles/client.dir/main.c.o -o client 
+/usr/bin/gcc -g CMakeFiles/client.dir/main.c.o -o client  /home/zr/桌面/miniftp/client/lib/libshell.a /home/zr/桌面/miniftp/client/lib/libfile.a /home/zr/桌面/miniftp/client/lib/libnetwork.a 

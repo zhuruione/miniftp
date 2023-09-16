@@ -1,6 +1,11 @@
 #include <stdio.h>
+#include "work.h"
 
 int main() {
-    printf("Hello, World!\n");
+
+    startListen();
+    while (1){
+        printf("1");
+    }
     return 0;
 }

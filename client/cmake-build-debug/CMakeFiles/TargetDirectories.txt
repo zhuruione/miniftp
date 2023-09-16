@@ -1,3 +1,12 @@
 /home/zr/桌面/miniftp/client/cmake-build-debug/CMakeFiles/client.dir
 /home/zr/桌面/miniftp/client/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/zr/桌面/miniftp/client/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zr/桌面/miniftp/client/cmake-build-debug/src/file/CMakeFiles/file.dir
+/home/zr/桌面/miniftp/client/cmake-build-debug/src/file/CMakeFiles/edit_cache.dir
+/home/zr/桌面/miniftp/client/cmake-build-debug/src/file/CMakeFiles/rebuild_cache.dir
+/home/zr/桌面/miniftp/client/cmake-build-debug/src/network/CMakeFiles/network.dir
+/home/zr/桌面/miniftp/client/cmake-build-debug/src/network/CMakeFiles/edit_cache.dir
+/home/zr/桌面/miniftp/client/cmake-build-debug/src/network/CMakeFiles/rebuild_cache.dir
+/home/zr/桌面/miniftp/client/cmake-build-debug/src/shell/CMakeFiles/shell.dir
+/home/zr/桌面/miniftp/client/cmake-build-debug/src/shell/CMakeFiles/edit_cache.dir
+/home/zr/桌面/miniftp/client/cmake-build-debug/src/shell/CMakeFiles/rebuild_cache.dir

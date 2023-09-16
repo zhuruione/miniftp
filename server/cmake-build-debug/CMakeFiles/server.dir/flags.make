@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/zr/桌面/miniftp/server/include
 
 C_FLAGS = -g -std=gnu11 -fdiagnostics-color=always
 

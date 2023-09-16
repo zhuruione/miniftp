@@ -129,6 +129,45 @@ server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
 .PHONY : server/fast
 
+#=============================================================================
+# Target rules for targets named file
+
+# Build rule for target.
+file: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 file
+.PHONY : file
+
+# fast build rule for target.
+file/fast:
+	$(MAKE) $(MAKESILENT) -f src/file/CMakeFiles/file.dir/build.make src/file/CMakeFiles/file.dir/build
+.PHONY : file/fast
+
+#=============================================================================
+# Target rules for targets named network
+
+# Build rule for target.
+network: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 network
+.PHONY : network
+
+# fast build rule for target.
+network/fast:
+	$(MAKE) $(MAKESILENT) -f src/network/CMakeFiles/network.dir/build.make src/network/CMakeFiles/network.dir/build
+.PHONY : network/fast
+
+#=============================================================================
+# Target rules for targets named work
+
+# Build rule for target.
+work: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 work
+.PHONY : work
+
+# fast build rule for target.
+work/fast:
+	$(MAKE) $(MAKESILENT) -f src/work/CMakeFiles/work.dir/build.make src/work/CMakeFiles/work.dir/build
+.PHONY : work/fast
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -161,7 +200,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... file"
+	@echo "... network"
 	@echo "... server"
+	@echo "... work"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
