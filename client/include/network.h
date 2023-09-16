@@ -14,7 +14,8 @@
 
 typedef enum DateType{
     COMMENT=1,    //内容
-    INSTRUCT    //指令
+    INSTRUCT,    //指令
+    END             //结束标志
 }DateType;
 struct DatePacket {
     DateType type;
@@ -29,4 +30,8 @@ struct DatePacket {
 size_t sendPacket(int client_socket, struct DatePacket *packet,int flag);    //发送数据包
 size_t receivePacket(int client_socket, struct DatePacket *packet); //接收户数据包
 int connectToServer(char *remoteAddr); //建立连接
+void endPacket(int client_socket); //发送结束标志
+
+size_t sendfile(int client_socket,int fd); //发送文件
+size_t receivefile(int client_socket,int fd);//接收文件
 #endif //CLIENT_NETWORK_H

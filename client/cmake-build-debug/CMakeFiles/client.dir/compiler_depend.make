@@ -73,12 +73,17 @@ CMakeFiles/client.dir/main.c.o: /home/zr/桌面/miniftp/client/main.c \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /home/zr/桌面/miniftp/client/include/shell.h \
   /home/zr/桌面/miniftp/client/include/file.h \
-  /home/zr/桌面/miniftp/client/include/config.h \
-  /home/zr/桌面/miniftp/client/include/network.h \
+  /usr/include/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
+  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
+  /usr/include/x86_64-linux-gnu/bits/stat.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
   /usr/include/string.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h \
+  /home/zr/桌面/miniftp/client/include/config.h \
+  /home/zr/桌面/miniftp/client/include/network.h \
   /usr/include/arpa/inet.h \
   /usr/include/netinet/in.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
@@ -125,17 +130,23 @@ CMakeFiles/client.dir/main.c.o: /home/zr/桌面/miniftp/client/main.c \
 
 /usr/include/x86_64-linux-gnu/bits/socket.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
-
 /usr/include/x86_64-linux-gnu/sys/socket.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /usr/include/netinet/in.h:
 
+/home/zr/桌面/miniftp/client/include/config.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
+
+/usr/include/x86_64-linux-gnu/bits/fcntl-linux.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -193,6 +204,10 @@ CMakeFiles/client.dir/main.c.o: /home/zr/桌面/miniftp/client/main.c \
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
+/usr/include/strings.h:
+
+/usr/include/x86_64-linux-gnu/sys/select.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /home/zr/桌面/miniftp/client/main.c:
@@ -200,8 +215,6 @@ CMakeFiles/client.dir/main.c.o: /home/zr/桌面/miniftp/client/main.c \
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/unistd.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
@@ -235,17 +248,11 @@ CMakeFiles/client.dir/main.c.o: /home/zr/桌面/miniftp/client/main.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h:
 
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/strings.h:
-
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
@@ -275,9 +282,17 @@ CMakeFiles/client.dir/main.c.o: /home/zr/桌面/miniftp/client/main.c \
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
 
+/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+
+/home/zr/桌面/miniftp/client/include/network.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h:
+
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /home/zr/桌面/miniftp/client/include/file.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_stat.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -299,12 +314,12 @@ CMakeFiles/client.dir/main.c.o: /home/zr/桌面/miniftp/client/main.c \
 
 /home/zr/桌面/miniftp/client/include/shell.h:
 
-/home/zr/桌面/miniftp/client/include/config.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h:
 
-/usr/include/x86_64-linux-gnu/asm/posix_types.h:
+/usr/include/fcntl.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/12/include/limits.h:
+/usr/include/x86_64-linux-gnu/bits/fcntl.h:
 
-/home/zr/桌面/miniftp/client/include/network.h:
+/usr/include/x86_64-linux-gnu/bits/stat.h:
 
 /usr/include/string.h:

@@ -10,3 +10,6 @@
 /home/zr/桌面/miniftp/server/cmake-build-debug/src/work/CMakeFiles/work.dir
 /home/zr/桌面/miniftp/server/cmake-build-debug/src/work/CMakeFiles/edit_cache.dir
 /home/zr/桌面/miniftp/server/cmake-build-debug/src/work/CMakeFiles/rebuild_cache.dir
+/home/zr/桌面/miniftp/server/cmake-build-debug/src/shell/CMakeFiles/shell.dir
+/home/zr/桌面/miniftp/server/cmake-build-debug/src/shell/CMakeFiles/edit_cache.dir
+/home/zr/桌面/miniftp/server/cmake-build-debug/src/shell/CMakeFiles/rebuild_cache.dir

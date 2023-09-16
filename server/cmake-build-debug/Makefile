@@ -168,6 +168,19 @@ work/fast:
 	$(MAKE) $(MAKESILENT) -f src/work/CMakeFiles/work.dir/build.make src/work/CMakeFiles/work.dir/build
 .PHONY : work/fast
 
+#=============================================================================
+# Target rules for targets named shell
+
+# Build rule for target.
+shell: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shell
+.PHONY : shell
+
+# fast build rule for target.
+shell/fast:
+	$(MAKE) $(MAKESILENT) -f src/shell/CMakeFiles/shell.dir/build.make src/shell/CMakeFiles/shell.dir/build
+.PHONY : shell/fast
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -203,6 +216,7 @@ help:
 	@echo "... file"
 	@echo "... network"
 	@echo "... server"
+	@echo "... shell"
 	@echo "... work"
 	@echo "... main.o"
 	@echo "... main.i"

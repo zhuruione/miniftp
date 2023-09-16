@@ -16,26 +16,26 @@ int connectToServer(char *remoteAddr) {
     client_socket = socket(AF_INET, SOCK_STREAM, 0);
     if (client_socket == -1) {
         perror("socket");
-        return 0;
+        exit(ERROR_NET);
     }
 
     // 获取服务器的IP地址
     server = gethostbyname(remoteAddr);
     if (server == NULL) {
         fprintf(stderr, "Error: Host not found\n");
-        return 0;
+        exit(ERROR_NET);
     }
 
     // 设置服务器地址和端口
     memset(&server_address, 0, sizeof(server_address));
     server_address.sin_family = AF_INET;
     server_address.sin_port = htons(PORT);
-    bcopy((char *)server->h_addr, (char *)&server_address.sin_addr.s_addr, server->h_length);
+    bcopy((char *) server->h_addr, (char *) &server_address.sin_addr.s_addr, server->h_length);
 
     // 连接到服务器
-    if (connect(client_socket, (struct sockaddr *)&server_address, sizeof(server_address)) < 0) {
+    if (connect(client_socket, (struct sockaddr *) &server_address, sizeof(server_address)) < 0) {
         perror("connect");
-        return 0;
+        exit(ERROR_NET);
     }
 
     return client_socket;
@@ -81,13 +81,46 @@ size_t sendPacket(int client_socket, struct DatePacket *packet, int flag) {
     }
 }
 
-//接收数据包,使用完要记得释放struct DatePacket
+
 size_t receivePacket(int client_socket, struct DatePacket *packet) {
     char *buf = (char *) packet;
-    size_t len = recv(client_socket, buf, sizeof(struct DatePacket), 0);
-    //保证至少接收完这个结构体的信息部分或接收完整个结构体
-    while (len < DATA_HEAD_LEN || len < packet->message_length + DATA_HEAD_LEN) {
-        len += recv(client_socket, buf + len, sizeof(struct DatePacket) - len, 0);
+    size_t len = 0;
+    //保证至少接收完这个结构体的信息部分
+    while (len < DATA_HEAD_LEN) {
+        len += recv(client_socket, buf + len, DATA_HEAD_LEN - len, 0);
+    }
+    len = 0;
+    //保证接收完信息部分,且不会超出这个包的大小
+    while (len < packet->message_length) {
+        len += recv(client_socket, buf + len + DATA_HEAD_LEN, packet->message_length - len, 0);
+        printf("");
     }
     return len;
+}
+
+void endPacket(int client_socket) {
+    struct DatePacket endPacket = {
+            .type=END,
+            .message_length=0
+    };
+    sendPacket(client_socket, &endPacket, 0); //发送结束包
+}
+/**
+ * 发送文件
+ * @param client_socket socket描述符
+ * @param fd 需要发送的文件描述符
+ * @return
+ */
+size_t sendfile(int client_socket, int fd) {
+
+}
+
+/**
+ * 接收文件
+ * @param client_socket
+ * @param fd
+ * @return
+ */
+size_t receivefile(int client_socket, int fd) {
+
 }

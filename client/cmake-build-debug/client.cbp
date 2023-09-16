@@ -210,6 +210,9 @@
 		<Unit filename="/home/zr/桌面/miniftp/client/src/shell/shell.c">
 			<Option target="shell"/>
 		</Unit>
+		<Unit filename="/home/zr/桌面/miniftp/client/src/shell/shell_funsions.c">
+			<Option target="shell"/>
+		</Unit>
 		<Unit filename="/home/zr/桌面/miniftp/client/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

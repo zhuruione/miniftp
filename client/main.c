@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     while (1){
         getcwd(cwd,sizeof (cwd));
         printf("miniftp@%s>",argv[1]);
-        scanf("%s",instruct);
-
+        fgets(instruct,PATH_MAX,stdin);
+        handleShell(instruct);
     }
 }

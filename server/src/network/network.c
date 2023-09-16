@@ -101,7 +101,7 @@ size_t sendPacket(int client_socket, struct DatePacket *packet, int flag) {
             //先发送结构体数据类型
             send(client_socket, (void *) packet, sizeof(size_t) , 0);
             //发送数据大小
-            send(client_socket, (void *) len, sizeof(size_t) , 0);
+            send(client_socket, (void *) &len, sizeof(size_t) , 0);
             send(client_socket, packet->buf, len, 0);
         }
 
@@ -111,13 +111,28 @@ size_t sendPacket(int client_socket, struct DatePacket *packet, int flag) {
              DATA_HEAD_LEN + (packet->message_length) * sizeof(char), 0);
     }
 }
+
 //接收数据包,使用完要记得释放struct DatePacket
 size_t receivePacket(int client_socket, struct DatePacket *packet) {
     char *buf = (char *) packet;
-    size_t len = recv(client_socket, buf, sizeof(struct DatePacket), 0);
-    //保证至少接收完这个结构体的信息部分或接收完整个结构体
-    while (len < DATA_HEAD_LEN || len < packet->message_length + DATA_HEAD_LEN) {
-        len += recv(client_socket, buf + len, sizeof(struct DatePacket) - len, 0);
+    size_t len = 0;
+    //保证至少接收完这个结构体的信息部分
+    while (len < DATA_HEAD_LEN) {
+        len += recv(client_socket, buf + len, DATA_HEAD_LEN - len, 0);
+    }
+    len = 0;
+    //保证接收完信息部分,且不会超出这个包的大小
+    while (len < packet->message_length) {
+        len += recv(client_socket, buf + len + DATA_HEAD_LEN, packet->message_length - len, 0);
+        printf("");
     }
     return len;
+}
+
+void endPacket(int client_socket) {
+    struct DatePacket endPacket = {
+            .type=END,
+            .message_length=0
+    };
+    sendPacket(client_socket, &endPacket, 0); //发送结束包
 }

@@ -1,1 +1,1 @@
-/usr/bin/gcc -g CMakeFiles/server.dir/main.c.o -o server  src/work/libwork.a src/file/libfile.a src/network/libnetwork.a 
+/usr/bin/gcc -g CMakeFiles/server.dir/main.c.o -o server  src/work/libwork.a src/file/libfile.a src/network/libnetwork.a src/shell/libshell.a 

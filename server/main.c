@@ -2,10 +2,7 @@
 #include "work.h"
 
 int main() {
-
+    chdir("/home");//设置工作目录
     startListen();
-    while (1){
-        printf("1");
-    }
     return 0;
 }

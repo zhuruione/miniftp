@@ -29,6 +29,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.26.4/CMakeSystem.cmake"
   "/home/zr/桌面/miniftp/server/src/file/CMakeLists.txt"
   "/home/zr/桌面/miniftp/server/src/network/CMakeLists.txt"
+  "/home/zr/桌面/miniftp/server/src/shell/CMakeLists.txt"
   "/home/zr/桌面/miniftp/server/src/work/CMakeLists.txt"
   )
 
@@ -44,6 +45,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/file/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/network/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/work/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/shell/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -52,4 +54,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/file/CMakeFiles/file.dir/DependInfo.cmake"
   "src/network/CMakeFiles/network.dir/DependInfo.cmake"
   "src/work/CMakeFiles/work.dir/DependInfo.cmake"
+  "src/shell/CMakeFiles/shell.dir/DependInfo.cmake"
   )

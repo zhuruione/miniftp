@@ -67,12 +67,14 @@ all: CMakeFiles/server.dir/all
 all: src/file/all
 all: src/network/all
 all: src/work/all
+all: src/shell/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/file/preinstall
 preinstall: src/network/preinstall
 preinstall: src/work/preinstall
+preinstall: src/shell/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -80,6 +82,7 @@ clean: CMakeFiles/server.dir/clean
 clean: src/file/clean
 clean: src/network/clean
 clean: src/work/clean
+clean: src/shell/clean
 .PHONY : clean
 
 #=============================================================================
@@ -113,6 +116,21 @@ src/network/clean: src/network/CMakeFiles/network.dir/clean
 .PHONY : src/network/clean
 
 #=============================================================================
+# Directory level rules for directory src/shell
+
+# Recursive "all" directory target.
+src/shell/all: src/shell/CMakeFiles/shell.dir/all
+.PHONY : src/shell/all
+
+# Recursive "preinstall" directory target.
+src/shell/preinstall:
+.PHONY : src/shell/preinstall
+
+# Recursive "clean" directory target.
+src/shell/clean: src/shell/CMakeFiles/shell.dir/clean
+.PHONY : src/shell/clean
+
+#=============================================================================
 # Directory level rules for directory src/work
 
 # Recursive "all" directory target.
@@ -134,6 +152,7 @@ src/work/clean: src/work/CMakeFiles/work.dir/clean
 CMakeFiles/server.dir/all: src/file/CMakeFiles/file.dir/all
 CMakeFiles/server.dir/all: src/network/CMakeFiles/network.dir/all
 CMakeFiles/server.dir/all: src/work/CMakeFiles/work.dir/all
+CMakeFiles/server.dir/all: src/shell/CMakeFiles/shell.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target server"
@@ -141,7 +160,7 @@ CMakeFiles/server.dir/all: src/work/CMakeFiles/work.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/server.dir/rule
@@ -213,14 +232,15 @@ src/network/CMakeFiles/network.dir/clean:
 # All Build rule for target.
 src/work/CMakeFiles/work.dir/all: src/file/CMakeFiles/file.dir/all
 src/work/CMakeFiles/work.dir/all: src/network/CMakeFiles/network.dir/all
+src/work/CMakeFiles/work.dir/all: src/shell/CMakeFiles/shell.dir/all
 	$(MAKE) $(MAKESILENT) -f src/work/CMakeFiles/work.dir/build.make src/work/CMakeFiles/work.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/work/CMakeFiles/work.dir/build.make src/work/CMakeFiles/work.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target work"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target work"
 .PHONY : src/work/CMakeFiles/work.dir/all
 
 # Build rule for subdir invocation for target.
 src/work/CMakeFiles/work.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/work/CMakeFiles/work.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles 0
 .PHONY : src/work/CMakeFiles/work.dir/rule
@@ -233,6 +253,32 @@ work: src/work/CMakeFiles/work.dir/rule
 src/work/CMakeFiles/work.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/work/CMakeFiles/work.dir/build.make src/work/CMakeFiles/work.dir/clean
 .PHONY : src/work/CMakeFiles/work.dir/clean
+
+#=============================================================================
+# Target rules for target src/shell/CMakeFiles/shell.dir
+
+# All Build rule for target.
+src/shell/CMakeFiles/shell.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/shell/CMakeFiles/shell.dir/build.make src/shell/CMakeFiles/shell.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/shell/CMakeFiles/shell.dir/build.make src/shell/CMakeFiles/shell.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target shell"
+.PHONY : src/shell/CMakeFiles/shell.dir/all
+
+# Build rule for subdir invocation for target.
+src/shell/CMakeFiles/shell.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/shell/CMakeFiles/shell.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zr/桌面/miniftp/server/cmake-build-debug/CMakeFiles 0
+.PHONY : src/shell/CMakeFiles/shell.dir/rule
+
+# Convenience name for target.
+shell: src/shell/CMakeFiles/shell.dir/rule
+.PHONY : shell
+
+# clean rule for target.
+src/shell/CMakeFiles/shell.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/shell/CMakeFiles/shell.dir/build.make src/shell/CMakeFiles/shell.dir/clean
+.PHONY : src/shell/CMakeFiles/shell.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

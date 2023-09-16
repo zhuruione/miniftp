@@ -16,7 +16,8 @@
 //数据包类型枚举
 typedef enum DateType {
     COMMENT=1,    //内容
-    INSTRUCT    //指令
+    INSTRUCT,    //指令
+    END
 } DateType;
 
 
@@ -37,6 +38,6 @@ int getClientSocket(int socketServer);
 void handle_client(int client_socket);//处理相关请求
 size_t sendPacket(int client_socket, struct DatePacket *packet,int flag);    //发送数据包
 size_t receivePacket(int client_socket, struct DatePacket *packet); //接收户数据包
-
+void endPacket(int client_socket);
 
 #endif //SERVER_NETWORK_H
